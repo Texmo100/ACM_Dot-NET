@@ -53,6 +53,8 @@ namespace ACM.BL
             set { _LastName = value; }
         }
 
+        public override string ToString() => FullName;
+
         /// <summary>
         /// Validates the customer
         /// </summary>
