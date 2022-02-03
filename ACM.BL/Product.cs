@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Acme.Common;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -23,7 +24,19 @@ namespace ACM.BL
 
         public int ProductId { get; private set; }
 
-        public string ProductName { get; set; }
+        private string _productName { get; set; }
+        public string ProductName
+        {
+            get
+            {
+                return _productName.InsertSpaces();
+            }
+
+            set
+            {
+                _productName = value;
+            }
+        }
 
         public override string ToString() => ProductName;
 
